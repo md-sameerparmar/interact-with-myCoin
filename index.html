@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set Message</title>
+    <style>
+        
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            /* height: 100vh; */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            /* padding: 15px; */
+        }
+
+        form {
+            background-color: lightgray;
+            width: 500px;
+            height: 250px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            /* gap: 20px; */
+            padding: 30px;
+            border-radius: 15px;
+            margin-top: 10px;
+        }
+
+        input[type=text]{
+            height: 50px;
+            padding: 10px;
+        }
+        input[type=submit]{
+            height: 30px;
+            /* padding: 10px; */
+        }
+
+    </style>
+</head>
+<body>
+    <div class="heading"><h1>Doge Coin</h1></div>
+    <form action="http://localhost:8081/mint" method="POST">
+        <h3>MINT</h3>
+        <input type="text" name="address" id="" placeholder="Adress"> 
+        <input type="text" name="MintAmount" id="" placeholder="Amount"> 
+        <input type="submit" value="Mint">
+    </form>
+
+    <form action="http://localhost:8081/burn" method="POST">
+        <!-- <input type="text" name="address" id="" placeholder="Adress">  -->
+        <h3>BURN</h3>
+        <input type="text" name="BurnAmount" id="" placeholder="Amount"> 
+        <input type="submit" value="Burn">
+    </form>
+
+    <form action="http://localhost:8081/freeze_user" method="POST">
+        <h3>FREEZE USER</h3>
+        <input type="text" name="UserAddress" id="" placeholder="Address"> 
+        <!-- <input type="text" name="BurnAmount" id="" placeholder="Amount">  -->
+        <input type="submit" value="Freeze User">
+    </form>
+
+    <form action="http://localhost:8081/unfreeze_user" method="POST">
+        <h3>UNFREEZE USER</h3>
+        <input type="text" name="UserAddress" id="" placeholder="Address"> 
+        <!-- <input type="text" name="BurnAmount" id="" placeholder="Amount">  -->
+        <input type="submit" value="Unfreeze User">
+    </form>
+</body>
+</html>
